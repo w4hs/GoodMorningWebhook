@@ -24,3 +24,6 @@ good_morning_bot-*.tar
 
 # Temporary files, for example, from tests.
 /tmp/
+
+
+.envrc
