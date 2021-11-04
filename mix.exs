@@ -24,7 +24,8 @@ defmodule GoodMorningBot.MixProject do
     [
       {:tesla, "~> 1.4"},
       {:hackney, "~> 1.17"},
-      {:jason, ">= 1.0.0"}
+      {:jason, ">= 1.0.0"},
+      {:quantum, "~> 3.0"}
     ]
   end
 end
