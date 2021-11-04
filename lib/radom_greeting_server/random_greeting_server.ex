@@ -35,11 +35,9 @@ defmodule GoodMorningBot.RandomGreetingServer do
   end
 
   defp random_greeting(greetings) do
-
     greetings
     |> Enum.random()
     |> clean_up()
     |> extract_language_and_greeting()
-
   end
 end
