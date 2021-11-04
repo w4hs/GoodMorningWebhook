@@ -1,18 +1,10 @@
 defmodule GoodMorningBot do
-  @moduledoc """
-  Documentation for `GoodMorningBot`.
-  """
+  defp get_random_message do
+    GoodMorningBot.RandomGreetingServer.get_random_greeting()
+  end
 
-  @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> GoodMorningBot.hello()
-      :world
-
-  """
-  def hello do
-    :world
+  def send_message_to_discord do
+    get_random_message()
+    |>GoodMorningBot.Adapter.DiscordWebHook.send_message()
   end
 end
