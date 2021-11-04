@@ -2,6 +2,10 @@ defmodule GoodMorningBot.RandomGreetingServer do
   use GenServer
 
 
+  def get_random_greeting(pid) do
+    GenServer.call(pid, :get_greetings)
+  end
+
   @impl GenServer
   def init(_) do
     {:ok, load_greetings()}
