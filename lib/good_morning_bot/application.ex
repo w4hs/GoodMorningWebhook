@@ -10,7 +10,8 @@ defmodule GoodMorningBot.Application do
     children = [
       # Starts a worker by calling: GoodMorningBot.Worker.start_link(arg)
       # {GoodMorningBot.Worker, arg}
-      {GoodMorningBot.RandomGreetingServer, []}
+      {GoodMorningBot.RandomGreetingServer, []},
+      {GoodMorningBot.Scheduler, []}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
