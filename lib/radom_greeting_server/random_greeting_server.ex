@@ -1,8 +1,8 @@
 defmodule GoodMorningBot.RandomGreetingServer do
   use GenServer
 
-  def start_link do
-    GenServer.start_link(__MODULE__, [], name: :random_greeting_server)
+  def start_link(args) do
+    GenServer.start_link(__MODULE__, args, name: :random_greeting_server)
   end
 
   def get_random_greeting do
