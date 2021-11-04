@@ -31,7 +31,11 @@ defmodule GoodMorningBot.RandomGreetingServer do
 
   defp extract_language_and_greeting(list_of_info) do
     [_, language, greeting] = list_of_info
-    greeting <> " Language: " <> language
+    language =
+      language
+      |> String.downcase()
+      |> String.capitalize()
+    greeting <> " (Language: " <> language <> ")"
   end
 
   defp random_greeting(greetings) do
